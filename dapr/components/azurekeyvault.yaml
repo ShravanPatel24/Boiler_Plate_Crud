@@ -1,0 +1,17 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: azurekeyvault
+  namespace: default
+spec:
+  type: secretstores.azure.keyvault
+  version: v1
+  metadata:
+  - name: vaultName
+    value: "softobiz-kv-poc"  
+  - name: azureTenantId
+    value: "8b2a50c8-01e4-4840-a8c2-95e665b97536"
+  - name: azureClientId
+    value: "e4aa506f-16bf-47dc-a304-e394691df30a"   
+  - name: azureClientSecret
+    value: "bKk8Q~Wa5nsQonnhvk6M3yJH6ssW6HxTqCCp0cEx"

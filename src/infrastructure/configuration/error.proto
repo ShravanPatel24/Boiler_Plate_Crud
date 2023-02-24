@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package errorhandler;
+
+// The greeting service definition.
+service ErrorHandler {
+  // Sends a greeting
+  rpc GetErrorResponse (ErrorRequest) returns (ErrorResponse);
+}
+
+// The request message containing the user's name.
+message ErrorRequest {
+	string errorCode = 1;
+}
+
+// The response message containing the greetings.
+message ErrorResponse {
+	string errorCode = 1;
+	string name = 2;
+	string errorMessage = 3;
+	bool canRetry = 4;
+	int32 noOfRetries = 5;
+	string requestId = 6;
+	bool publishToDlq = 7;
+	string category = 8;
+}
